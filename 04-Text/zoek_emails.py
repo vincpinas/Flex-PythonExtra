@@ -19,4 +19,6 @@ with open("tekstmetemails.txt", "r") as bestand:
         # Volgende regel lezen
         regel = bestand.readline()
 
-print(emails)
+for l in emails:
+    print(l)
+
