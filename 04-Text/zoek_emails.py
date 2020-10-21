@@ -14,7 +14,7 @@ with open("tekstmetemails.txt", "r") as bestand:
         gevonden = re.findall(patroon, regel)
 
         # Alle gevonden emails aan de email list toevoegen
-        emails.append(gevonden)
+        emails.extend(gevonden)
         
         # Volgende regel lezen
         regel = bestand.readline()
@@ -22,3 +22,12 @@ with open("tekstmetemails.txt", "r") as bestand:
 for l in emails:
     print(l)
 
+
+lengte = len(emails)
+i = 0
+
+with open("uidaging1.txt", "w") as f:
+    while i < lengte:
+        f.write(emails[i])
+        f.write("\n")
+        i += 1
