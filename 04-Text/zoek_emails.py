@@ -1,8 +1,8 @@
-import re
+import re, sys
 
 emails = []
 
-with open("tekstmetemails.txt", "r") as bestand:
+with open(sys.argv[1], "r") as bestand:
 
     regel = bestand.readline()
    
